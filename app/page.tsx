@@ -1,3 +1,5 @@
+import { WhatsAppContact } from "./WhatsAppContact";
+
 const services = [
   {
     number: "01",
@@ -68,6 +70,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="impactRail" aria-label="Aya Garden strengths">
+        <div className="shell impactRailInner">
+          <div><span>01</span><b>Commercial-first</b><small>Hotels, retail, developments & institutions</small></div>
+          <div><span>02</span><b>Mobilised for scale</b><small>Site teams shaped around the programme</small></div>
+          <div><span>03</span><b>One partner, end to end</b><small>Installation, irrigation & ongoing care</small></div>
+        </div>
+      </section>
+
       <section className="intro section shell" aria-labelledby="intro-title">
         <p className="sectionKicker">Aya Garden / What we do</p>
         <div className="introGrid">
@@ -83,6 +93,16 @@ export default function Home() {
               enough for complex projects, straightforward enough to be easy to work with.
             </p>
             <a className="textLink" href="#approach">See how we deliver <span>→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section className="signature section" aria-labelledby="signature-title">
+        <div className="shell signatureGrid">
+          <p className="sectionKicker">The Aya standard</p>
+          <div>
+            <h2 id="signature-title">Made to perform.<br /><em>Made to belong.</em></h2>
+            <p>Premium does not mean loud. It means every entrance feels considered, every planting choice makes sense, and the whole landscape gets better with time.</p>
           </div>
         </div>
       </section>
@@ -112,7 +132,9 @@ export default function Home() {
       </section>
 
       <section className="sectors" id="sectors" aria-labelledby="sectors-title">
-        <div className="sectorImage" role="img" aria-label="Aya Garden commercial landscaping team at work" />
+        <div className="sectorImage" role="img" aria-label="Tropical commercial landscape designed for Mauritius">
+          <div className="imageCaption"><span>MU</span><p><b>Designed for island conditions</b><small>Beauty, resilience and practical care</small></p></div>
+        </div>
         <div className="sectorContent">
           <p className="sectionKicker light">Built for bigger places</p>
           <h2 id="sectors-title">Landscapes people<br />remember.</h2>
@@ -123,6 +145,22 @@ export default function Home() {
                 <div><h3>{title}</h3><p>{text}</p></div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="standards section" aria-labelledby="standards-title">
+        <div className="shell">
+          <div className="standardsHeading">
+            <p className="sectionKicker">The work behind the finish</p>
+            <h2 id="standards-title">Premium on the surface.<br />Serious underneath.</h2>
+            <p>Large projects need more than beautiful planting. They need a landscape team that understands the programme, the people and what happens after handover.</p>
+          </div>
+          <div className="standardsGrid">
+            <article><span>01</span><h3>Mobilisation</h3><p>Crews and materials planned around access, phasing and the wider site programme.</p></article>
+            <article><span>02</span><h3>Coordination</h3><p>Clear communication with owners, consultants, contractors and operational teams.</p></article>
+            <article><span>03</span><h3>Quality control</h3><p>Careful preparation, planting and finishing—not a rushed green layer at the end.</p></article>
+            <article><span>04</span><h3>Aftercare</h3><p>Practical handover and reliable maintenance options so the landscape keeps its promise.</p></article>
           </div>
         </div>
       </section>
@@ -177,26 +215,7 @@ export default function Home() {
             <p className="contactIntro">Tell us what is taking shape. We’ll arrange a site discussion and take it from there—simple.</p>
             <div className="contactNote"><span>MU</span><p><b>Island-wide projects</b><small>Hotels · Retail · Residential · Institutional</small></p></div>
           </div>
-          <form className="projectForm" action="#contact">
-            <label>Project type
-              <select name="project-type" defaultValue="">
-                <option value="" disabled>Select one</option>
-                <option>Hotel or resort</option>
-                <option>Mall or retail centre</option>
-                <option>Condo or residential development</option>
-                <option>Corporate or institutional</option>
-                <option>Other large-scale project</option>
-              </select>
-            </label>
-            <div className="formRow">
-              <label>Your name<input name="name" placeholder="Name" required /></label>
-              <label>Phone / email<input name="contact" placeholder="Best way to reach you" required /></label>
-            </div>
-            <label>Project location<input name="location" placeholder="Where in Mauritius?" /></label>
-            <label>Tell us about the site<textarea name="brief" placeholder="Scope, stage, timeline or anything useful" rows={4} /></label>
-            <button className="button formButton" type="submit">Request a site discussion <span>↗</span></button>
-            <small className="formSmall">No long forms. Just enough to start the right conversation.</small>
-          </form>
+          <WhatsAppContact />
         </div>
       </section>
 
@@ -207,6 +226,7 @@ export default function Home() {
         </div>
         <div className="shell footerBottom"><span>© 2026 Aya Garden</span><span>Landscapes made to belong.</span></div>
       </footer>
+
     </main>
   );
 }
