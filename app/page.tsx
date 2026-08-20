@@ -1,4 +1,5 @@
 import { WhatsAppContact } from "./WhatsAppContact";
+import { MobileNav } from "./MobileNav";
 
 const services = [
   {
@@ -49,6 +50,7 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </div>
           <a className="navCta" href="#contact">Discuss a project</a>
+          <MobileNav />
         </nav>
 
         <div className="heroShade" />
@@ -128,6 +130,7 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <p className="swipeHint">Swipe to explore capabilities <span>→</span></p>
         </div>
       </section>
 
@@ -162,6 +165,7 @@ export default function Home() {
             <article><span>03</span><h3>Quality control</h3><p>Careful preparation, planting and finishing—not a rushed green layer at the end.</p></article>
             <article><span>04</span><h3>Aftercare</h3><p>Practical handover and reliable maintenance options so the landscape keeps its promise.</p></article>
           </div>
+          <p className="swipeHint standardsHint">Swipe to see how we deliver <span>→</span></p>
         </div>
       </section>
 
